@@ -1,0 +1,29 @@
+.App-logo {
+   height: 35px;
+}
+
+.App-header {
+
+    background-color: #1D428A;
+    /*height: 40px;*/
+    padding-top: 10px;
+    padding-bottom:10px;
+    padding-left: 40px;
+    display: flex;
+    box-shadow: 1px 3px 5px cyan;
+    margin-bottom: 70px;
+}
+/*
+   *1. Text-align: left
+   2. float: left
+       .App-logo.after{
+           clear: both;
+       }
+       add in line clear both;
+   3. display: flex
+
+   if inline or inline-block (text or image) use text-align
+   if need to divided into left and right or no need to compatable old browser
+   use display: flex
+
+    */
