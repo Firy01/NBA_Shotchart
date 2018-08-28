@@ -1,7 +1,9 @@
 import React from "react";
 import nba from 'nba';
 import {Profile} from "./Profile";
-import {ShotChart} from "./ShotChart";
+
+
+import {DataViewContainer} from "./DataViewContainer";
 
 //window.nba = nba; expose to the windows scope
 export class Main extends React.Component{
@@ -23,12 +25,13 @@ export class Main extends React.Component{
            }
        );
     }
+
     render(){
         console.log(this.state.playerInfo);
         return(
             <div className="main">
-                <Profile/>
-                <ShotChart playerId={this.state.playerId}/>
+                <Profile playerInfo={this.state.playerInfo}/>
+                <DataViewContainer playerId={this.state.playerId}/>
             </div>
         );
     }

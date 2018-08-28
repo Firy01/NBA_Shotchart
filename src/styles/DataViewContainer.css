@@ -1,0 +1,6 @@
+.data-view {
+    /*width: 550px;*/
+    /*width: 100%;*/
+    flex: 1;
+    /*because in main.js we used display: flex, here we can try to use flex: 1*/
+}
