@@ -4,6 +4,7 @@ import {Profile} from "./Profile";
 
 
 import {DataViewContainer} from "./DataViewContainer";
+import {SearchBar} from "./SearchBar";
 
 //window.nba = nba; expose to the windows scope
 export class Main extends React.Component{
@@ -30,8 +31,12 @@ export class Main extends React.Component{
         console.log(this.state.playerInfo);
         return(
             <div className="main">
-                <Profile playerInfo={this.state.playerInfo}/>
-                <DataViewContainer playerId={this.state.playerId}/>
+
+                <SearchBar/>
+                <div className="player">
+                        <Profile playerInfo={this.state.playerInfo}/>
+                        <DataViewContainer playerId={this.state.playerId}/>
+                </div>
             </div>
         );
     }

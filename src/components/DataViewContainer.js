@@ -10,10 +10,11 @@ export class DataViewContainer extends React.Component {
     state = {
         minCount: 2,
         chartType: 'hexbin',
-        displayTooltip: true,
+        displayTooltips: true,
     }
 
     onCountSliderChange = (count) => {
+        console.log("onCountSliderChange")
         this.setState({ minCount: count });
     }
 
@@ -24,7 +25,7 @@ export class DataViewContainer extends React.Component {
 
     onTooltipChange = (displayTooltip) => {
         console.log(displayTooltip);
-        this.setState({ displayTooltip });
+        this.setState({ displayTooltips:  displayTooltip});
     }
 
     render() {
@@ -35,7 +36,7 @@ export class DataViewContainer extends React.Component {
                     playerId={this.props.playerId}
                     minCount={this.state.minCount}
                     chartType={this.state.chartType}
-                    displayTooltips={this.state.displayTooltip}
+                    displayTooltips={this.state.displayTooltips}
                 />
                 <div className="filters">
                     {this.state.chartType === 'hexbin' ?
