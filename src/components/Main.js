@@ -1,7 +1,7 @@
 import React from "react";
 import nba from 'nba';
 import {Profile} from "./Profile";
-
+import { DEFAULT_PLAYER_INFO } from "../constants";
 
 import {DataViewContainer} from "./DataViewContainer";
 import {SearchBar} from "./SearchBar";
@@ -10,12 +10,13 @@ import {SearchBar} from "./SearchBar";
 export class Main extends React.Component{
     state ={
 
-        playerInfo: {
-            playerId: nba.findPlayer("Stephen curry").playerId,
-        }
+        playerInfo: DEFAULT_PLAYER_INFO
+        /*{
+            playerId: nba.findPlayer(DEFAULT_PLAYER_INFO.playerName).playerId,
+        }*/
     }
     componentDidMount(){
-        this.loadPlayerInfo("Stephen Curry")
+        this.loadPlayerInfo(this.state.playerInfo.playerName)
     }
     loadPlayerInfo = (playerName) =>{
 
