@@ -6,6 +6,7 @@ import { DEFAULT_PLAYER_INFO } from "../constants";
 import {DataViewContainer} from "./DataViewContainer";
 import {SearchBar} from "./SearchBar";
 
+
 //window.nba = nba; expose to the windows scope
 export class Main extends React.Component{
     state ={
